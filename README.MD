@@ -15,3 +15,6 @@
 
 `npm run es6-babel`
 - es6的`export`和`import`
+
+##lodash和webpack
+- lodash支持使用webpack打包使用中的内容，需要用到插件`lodash-webpack-plugin`

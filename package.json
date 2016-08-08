@@ -2,13 +2,21 @@
   "name": "self-practice",
   "devDependencies": {
     "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
-    "babel-preset-es2015": "^6.13.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-lodash": "^3.2.6",
+    "babel-preset-es2015": "^6.13.2",
     "eslint": "^3.2.2",
+    "lodash": "^4.14.1",
+    "lodash-webpack-plugin": "^0.9.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "babel": {
+    "plugins": [
+      "lodash"
+    ],
     "presets": [
       "es2015"
     ]
@@ -16,6 +24,8 @@
   "scripts": {
     "babel": "babel babel-eslint/array.js --out-dir dist/ --source-maps",
     "lint": "eslint babel-eslint/array.js",
-    "es6-babel":"babel es6-babel/ --out-dir dist/es6-babel/; node dist/es6-babel/calc.js"
+    "es6-babel": "babel es6-babel/ --out-dir dist/es6-babel/; node dist/es6-babel/calc.js",
+    "lodash-practice": "babel lodash-practice/ --out-dir dist/lodash-practice; node dist/lodash-practice/practice.js",
+    "lodash-webpack": "webpack lodash-practice/practice.js dist/lodash-practice/practice.min.js"
   }
 }
